@@ -1,0 +1,124 @@
+//Глобальные стили
+/* Слайдер */
+.slick-slider{
+
+    /* Слайдер запущен */
+    &.slick-initialized{
+        
+    }
+
+    /* Слайдер с точками */
+    &.slick-dotted{
+        
+    }
+}
+
+/* Ограничивающая оболочка */
+.slick-list {
+    
+}
+
+/* Лента слайдов */
+.slick-track{
+
+}
+
+/* Слайд */
+.slick-slide{
+
+    /* Слайд активный (показывается) */
+    &.slick-active{
+
+    }
+    /* Слайд основной */
+    &.slick-current{
+
+    }
+    /* Слайд по центру */
+    &.slick-center{
+
+    }
+    /* Клонированный слайд */
+    &.slick-cloned{
+
+    }
+}
+
+/* Стрелка */
+.slick-arrow{
+
+    /* Стрелка влево */
+    &.slick-prev{
+
+    }
+    /* Стрелка вправо */
+    &.slick-next{
+
+    }
+    /* Стрелка не активная */
+    &.slick-disabled{
+
+    }
+}
+
+/* Точки (булиты) */
+.slick-dots{
+    li{
+        /* Активная точка */
+        &.slick-active{
+
+        }
+
+        /* Элемент точки */
+        button{
+
+        }
+    }
+}
+
+//specialties-slider
+.specialties__slider{
+    position: relative;
+
+    /* Ограничивающая оболочка */
+    .slick-list {
+        overflow: hidden;
+    }
+    
+    .slick-dots{
+        display: flex;
+        justify-content: center;
+        margin: 30px 0 0 0;
+        li{
+            list-style: none;
+            margin: 0 10px 0 0;
+
+            /* Активная точка */
+            &.slick-active{
+                button{
+                    background-color: #fff;
+                }
+            }
+    
+            /* Элемент точки */
+            button{
+                font-size: 0;
+                width: 12px;
+                height: 12px;
+                background-color: rgba(128, 130, 127, .5);
+                border-radius: 50%;
+                border: none;
+                cursor: pointer;
+                padding: 0;
+            }
+        }
+        @media (max-width: 768px){
+            margin: 25px 0 0 0;
+        } 
+        @media (max-width: 480px){
+            margin: 15px 0 0 0;
+        } 
+    }
+}
+
+ 

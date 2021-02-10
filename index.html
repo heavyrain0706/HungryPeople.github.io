@@ -1,0 +1,1256 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="apple-touch-icon" sizes="144x144" href="./img/favicon/apple-touch-icon.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="./img/favicon/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="./img/favicon/favicon-16x16.png">
+    <link rel="manifest" href="./img/favicon/site.webmanifest">
+    <link rel="mask-icon" href="./img/favicon/safari-pinned-tab.svg" color="#5bbad5">
+    <meta name="msapplication-TileColor" content="#da532c">
+    <meta name="theme-color" content="#ffffff">
+    <title>Голодающие</title>
+    <link rel="stylesheet" href="./css/style.css">
+    <link rel="stylesheet" href="./libs/fancybox/jquery.fancybox.min.css">
+    <link rel="stylesheet" href="./libs/datepicker/datepicker.min.css">
+    <link rel="stylesheet" href="./libs/aos/aos.css">
+    <link rel="stylesheet" href="./libs/slick/slick.css">
+</head>
+<body>
+    <div class="wrapper">
+        <header class="header" id="header">
+            <div class="container">
+                <section class="header__inner">
+                    <div class="header__logo">
+                        <img src="./img/header/logo.png" alt="logo" data-aos="flip-left" data-aos-delay="300" data-aos-duration="1200">
+                    </div>
+                    <nav class="header__nav nav">
+                        <ul class="nav__list">
+                            <li class="nav__item"><a href="#header" class="nav__link">Главная</a></li>
+                            <li class="nav__item"><a href="#about" class="nav__link">о нас</a></li>
+                            <li class="nav__item"><a href="#team" class="nav__link">команда</a></li>
+                            <li class="nav__item"><a href="#booking" class="nav__link">бронировать</a></li>
+                            <li class="nav__item"><a href="#menu" class="nav__link">меню</a></li>
+                            <li class="nav__item"><a href="#events" class="nav__link">Мероприятия</a></li>
+                            <li class="nav__item"><a href="#gallery" class="nav__link">галерея</a></li>
+                            <li class="nav__item"><a href="#contact" class="nav__link">контакты</a></li>
+                        </ul>
+                        <div class="nav__burger">
+                            <span></span>
+                        </div>
+                    </nav>
+                    <div class="header__intro">
+                        <div class="header__schedule" data-aos="fade-down" data-aos-delay="800" data-aos-duration="1200">
+                            <div class="header__schedule-inner">
+                                Пн - Пт: 8:00 - 22:00, Сб - Вс: 8:00 - 02:00
+                            </div>
+                        </div>
+                        <div class="header__content">
+                            <h3 class="header__subtitle">ресторан</h3>
+                            <h1 class="header__title">Голодающие</h1>
+                            <div class="header__buttons">
+                                <button id="call-modal" class="header__btn">бронировать</button>
+                                <button id="explore" class="header__btn">смотреть</button>
+                            </div>
+                        </div>
+                        <div class="header__socials">
+                            <div class="header__social" data-aos="fade-up" data-aos-delay="400" data-aos-duration="900" data-aos-offset="0">
+                                <a href="#" class="header__social-link header__social-link_fb">
+                                    <svg width="12" height="21" viewBox="0 0 12 21" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                        <path d="M10.6484 12.2339L11.1953 8.64014H7.71875V6.29639C7.71875 5.28076 8.1875 4.34326 9.75 4.34326H11.3516V1.25732C11.3516 1.25732 9.90625 0.983887 8.53906 0.983887C5.6875 0.983887 3.8125 2.7417 3.8125 5.8667V8.64014H0.609375V12.2339H3.8125V20.9839H7.71875V12.2339H10.6484Z" fill="white"/>
+                                    </svg>
+                                </a>
+                            </div>
+                            <div class="header__social" data-aos="fade-up" data-aos-delay="600" data-aos-duration="900" data-aos-offset="0">
+                                <a href="#" class="header__social-link header__social-link_tw">
+                                    <svg width="20" height="18" viewBox="0 0 20 18" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                        <path d="M17.9297 4.92139C18.7109 4.33545 19.4141 3.63232 19.9609 2.81201C19.2578 3.12451 18.4375 3.35889 17.6172 3.43701C18.4766 2.9292 19.1016 2.14795 19.4141 1.17139C18.6328 1.64014 17.7344 1.9917 16.8359 2.18701C16.0547 1.3667 15 0.897949 13.8281 0.897949C11.5625 0.897949 9.72656 2.73389 9.72656 4.99951C9.72656 5.31201 9.76562 5.62451 9.84375 5.93701C6.44531 5.7417 3.39844 4.10107 1.36719 1.64014C1.01562 2.22607 0.820312 2.9292 0.820312 3.71045C0.820312 5.1167 1.52344 6.3667 2.65625 7.10889C1.99219 7.06982 1.32812 6.91357 0.78125 6.60107V6.64014C0.78125 8.63232 2.1875 10.2729 4.0625 10.6636C3.75 10.7417 3.35938 10.8198 3.00781 10.8198C2.73438 10.8198 2.5 10.7808 2.22656 10.7417C2.73438 12.3823 4.25781 13.5542 6.05469 13.5933C4.64844 14.687 2.89062 15.3511 0.976562 15.3511C0.625 15.3511 0.3125 15.312 0 15.2729C1.79688 16.4448 3.94531 17.1089 6.28906 17.1089C13.8281 17.1089 17.9297 10.8979 17.9297 5.46826C17.9297 5.27295 17.9297 5.1167 17.9297 4.92139Z" fill="white"/>
+                                    </svg>
+                                </a>
+                            </div>
+                            <div class="header__social" data-aos="fade-up" data-aos-delay="800" data-aos-duration="900" data-aos-offset="0">
+                                <a href="#" class="header__social-link header__social-link_inst">
+                                    <svg width="18" height="18" viewBox="0 0 18 18" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                        <path d="M9 4.4917C8.19271 4.4917 7.4375 4.70003 6.73438 5.1167C6.05729 5.50732 5.51042 6.0542 5.09375 6.75732C4.70312 7.43441 4.50781 8.1766 4.50781 8.98389C4.50781 9.79118 4.70312 10.5464 5.09375 11.2495C5.51042 11.9266 6.05729 12.4735 6.73438 12.8901C7.4375 13.2808 8.19271 13.4761 9 13.4761C9.80729 13.4761 10.5495 13.2808 11.2266 12.8901C11.9297 12.4735 12.4766 11.9266 12.8672 11.2495C13.2839 10.5464 13.4922 9.79118 13.4922 8.98389C13.4922 8.1766 13.2839 7.43441 12.8672 6.75732C12.4766 6.0542 11.9297 5.50732 11.2266 5.1167C10.5495 4.70003 9.80729 4.4917 9 4.4917ZM9 11.9136C8.19271 11.9136 7.5026 11.6271 6.92969 11.0542C6.35677 10.4813 6.07031 9.79118 6.07031 8.98389C6.07031 8.1766 6.35677 7.48649 6.92969 6.91357C7.5026 6.34066 8.19271 6.0542 9 6.0542C9.80729 6.0542 10.4974 6.34066 11.0703 6.91357C11.6432 7.48649 11.9297 8.1766 11.9297 8.98389C11.9297 9.79118 11.6432 10.4813 11.0703 11.0542C10.4974 11.6271 9.80729 11.9136 9 11.9136ZM14.7422 4.29639C14.7161 4.58285 14.599 4.83024 14.3906 5.03857C14.2083 5.24691 13.974 5.35107 13.6875 5.35107C13.401 5.35107 13.1536 5.24691 12.9453 5.03857C12.737 4.83024 12.6328 4.58285 12.6328 4.29639C12.6328 4.00993 12.737 3.76253 12.9453 3.5542C13.1536 3.34587 13.401 3.2417 13.6875 3.2417C13.974 3.2417 14.2214 3.34587 14.4297 3.5542C14.638 3.76253 14.7422 4.00993 14.7422 4.29639ZM17.7109 5.35107C17.6589 4.59587 17.5417 3.94482 17.3594 3.39795C17.125 2.74691 16.7604 2.18701 16.2656 1.71826C15.7969 1.22347 15.237 0.858887 14.5859 0.624512C14.0391 0.44222 13.388 0.338053 12.6328 0.312012C11.9036 0.259928 10.6927 0.233887 9 0.233887C7.30729 0.233887 6.08333 0.259928 5.32812 0.312012C4.59896 0.338053 3.96094 0.44222 3.41406 0.624512C2.76302 0.858887 2.1901 1.22347 1.69531 1.71826C1.22656 2.18701 0.875 2.74691 0.640625 3.39795C0.458333 3.94482 0.341146 4.59587 0.289062 5.35107C0.263021 6.08024 0.25 7.29118 0.25 8.98389C0.25 10.6766 0.263021 11.9006 0.289062 12.6558C0.341146 13.3849 0.458333 14.0229 0.640625 14.5698C0.875 15.2209 1.22656 15.7938 1.69531 16.2886C2.1901 16.7573 2.76302 17.0959 3.41406 17.3042C3.96094 17.5125 4.59896 17.6297 5.32812 17.6558C6.08333 17.7078 7.30729 17.7339 9 17.7339C10.6927 17.7339 11.9036 17.7078 12.6328 17.6558C13.388 17.6297 14.0391 17.5256 14.5859 17.3433C15.237 17.1089 15.7969 16.7573 16.2656 16.2886C16.7604 15.7938 17.125 15.2209 17.3594 14.5698C17.5417 14.0229 17.6458 13.3849 17.6719 12.6558C17.724 11.9006 17.75 10.6766 17.75 8.98389C17.75 7.29118 17.737 6.08024 17.7109 5.35107ZM15.8359 14.1401C15.5234 14.9214 14.9635 15.4813 14.1562 15.8198C13.7396 15.9761 13.0365 16.0802 12.0469 16.1323C11.5 16.1584 10.6927 16.1714 9.625 16.1714H8.375C7.33333 16.1714 6.52604 16.1584 5.95312 16.1323C4.98958 16.0802 4.28646 15.9761 3.84375 15.8198C3.0625 15.5073 2.5026 14.9474 2.16406 14.1401C2.00781 13.6974 1.90365 12.9943 1.85156 12.0308C1.82552 11.4578 1.8125 10.6506 1.8125 9.60889V8.35889C1.8125 7.31722 1.82552 6.50993 1.85156 5.93701C1.90365 4.94743 2.00781 4.2443 2.16406 3.82764C2.47656 3.02035 3.03646 2.46045 3.84375 2.14795C4.28646 1.9917 4.98958 1.88753 5.95312 1.83545C6.52604 1.80941 7.33333 1.79639 8.375 1.79639H9.625C10.6667 1.79639 11.474 1.80941 12.0469 1.83545C13.0365 1.88753 13.7396 1.9917 14.1562 2.14795C14.9635 2.46045 15.5234 3.02035 15.8359 3.82764C15.9922 4.2443 16.0964 4.94743 16.1484 5.93701C16.1745 6.48389 16.1875 7.29118 16.1875 8.35889V9.60889C16.1875 10.6506 16.1745 11.4578 16.1484 12.0308C16.0964 12.9943 15.9922 13.6974 15.8359 14.1401Z" fill="white"/>
+                                    </svg>
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="header__arrow">
+                        <a href="#" class="header__arrow-btn">
+                            <svg width="14" height="9" viewBox="0 0 14 9" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                <path d="M6.33594 8.28906C6.6875 8.64062 7.27344 8.64062 7.625 8.28906L12.9375 2.97656C13.3281 2.58594 13.3281 2 12.9375 1.64844L12.0781 0.75C11.6875 0.398438 11.1016 0.398438 10.75 0.75L6.96094 4.53906L3.21094 0.75C2.85938 0.398438 2.27344 0.398438 1.88281 0.75L1.02344 1.64844C0.632812 2 0.632812 2.58594 1.02344 2.97656L6.33594 8.28906Z" fill="#333333"/>
+                            </svg>
+                        </a>
+                    </div>
+                </section>
+            </div>
+        </header>
+        <main class="contant">
+            <section class="about" id="about">
+                <div class="container">
+                    <div class="about__body">
+                        <div class="about__column" data-aos="fade-right" data-aos-duration="1200">
+                            <div class="about__header-block header-block">
+                                <h2 class="header-block__title">
+                                    О нас
+                                </h2>
+                                <div class="header-block__subtitle">
+                                    Высококлассный ресторан с расслабляющей атмосферой, 
+                                    удостоенный сертификата качества.
+                                </div>
+                            </div>
+                            <div class="about__text text">
+                                Заведение находится в здании простого деревенского стиля с элегантными современными
+                                штрихами. Зимними вечерами здесь можно отдохнуть у уютного дровяного камина, 
+                                а летом выбрать столики на улице и насладиться видом на раскинувшиеся рядом
+                                поля — или же выбрать столик в живописном внутреннем дворике, полном цветов. 
+                                Ежедневное меню, приготовленное на кухне ресторана, включает в себя свежую рыбу, 
+                                пироги, стейки и ежедневные фирменные блюда от шеф-повара.
+                            </div>
+                        </div>
+                        <div class="about__column" id="shift-left" data-aos="fade-left" data-aos-duration="1200">
+                            <div class="about__media media media_right">
+                                <div class="about__img">
+                                    <img src="./img/about/1.jpg" alt="">
+                                </div>
+                                <div class="about__rect rect rect_right">
+                                    <img src="./img/global/rect.png" alt="">
+                                </div>
+                            </div>                      
+                        </div>
+                    </div>
+                </div>
+            </section>
+            <section class="team" id="team">
+                <div class="container">
+                    <div class="team__header-block header-block_small">
+                        команда
+                    </div>
+                    <div class="team__body">
+                        <div class="team__column" id="shift-right" data-aos="fade-right" data-aos-duration="1200">
+                            <div class="team__media media media_left">
+                                <div class="team__img">
+                                    <img src="./img/team/2.jpg" alt="">
+                                </div>
+                                <div class="team__rect rect rect_left">
+                                    <img src="./img/global/rect.png" alt="">
+                                </div>
+                            </div>
+                        </div>
+                        <div class="team__column" data-aos="fade-left" data-aos-duration="1200">
+                            <div class="team__header-block header-block">
+                                <div class="header-block__title header-block__title_white">
+                                    Шеф-повар
+                                </div>
+                                <div class="header-block__subtitle header-block__subtitle_white">
+                                    Эццио Аудиторе
+                                </div>
+                            </div>
+                            <div class="team__text text text_white">
+                                Эцио Аудиторе де Фиренце являлся поваром ресторана, впоследствии ставшим шеф-поваром Голодающих.
+                                Родился 24 июня 1992 года и стал наставником других поваров.
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+            <section class="booking" id="booking">
+                <div class="container">
+                    <div class="booking__body">
+                        <div class="booking__column" data-aos="flip-right" data-aos-duration="1200">
+                            <div class="booking__header-block header-block">
+                                <div class="header-block__title">
+                                    Забронировать стол
+                                </div>
+                            </div>
+                            <form action="#" method="POST" id="booking-form" class="booking__form form-booking" name="bookingForm">
+                                <div class="form-booking__inputs">
+                                    <div class="form-booking__input">
+                                        <input type="text" placeholder="Имя" name="name">
+                                    </div>
+                                    <div class="form-booking__input">
+                                        <input type="email" placeholder="Email" name="email">
+                                    </div>
+                                    <div class="form-booking__input">
+                                        <input type="tel" id="phone-booking" placeholder="Телефон" name="phone" required>
+                                    </div>
+                                    <div class="form-booking__input">  
+                                        <div class="form-booking__select select">
+                                            <div class="select__header">
+                                                <div id="current-booking" class="select__current">Количество гостей</div>
+                                                <div class="select__icon">
+                                                    <svg width="22" height="22" aria-hidden="true" focusable="false" data-prefix="fas" data-icon="caret-down" 
+                                                    class="svg-inline--fa fa-caret-down fa-w-10" role="img" 
+                                                    xmlns="http://www.w3.org/2000/svg" viewBox="0 0 320 512"><path fill="currentColor"
+                                                    d="M31.3 192h257.3c17.8 0 26.7 21.5 14.1 34.1L174.1 354.8c-7.8 7.8-20.5 7.8-28.3 0L17.2 226.1C4.6 213.5 13.5 192 31.3 192z"></path></svg>
+                                                </div>
+                                            </div>
+                                            <div class="select__body">
+                                                <div class="select__item">1 человек</div>
+                                                <div class="select__item">2 человека</div>
+                                                <div class="select__item">3 человека</div>
+                                                <div class="select__item">4 человека</div>
+                                                <div class="select__item">5 человек</div>
+                                                <div class="select__item">6 человек</div>
+                                                <div class="select__item">7 и больше человек</div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="form-booking__input">
+                                        <input type='text' class="datepicker-here" data-position="bottom left" placeholder="Дата" required readonly>
+                                    </div>
+                                    <div class="form-booking__input">
+                                        <div class="form-booking__select select">
+                                            <div class="select__header">
+                                                <div id="current-booking" class="select__current">Время</div>
+                                                <div class="select__icon">
+                                                    <svg width="22" height="22" aria-hidden="true" focusable="false" data-prefix="fas" data-icon="caret-down" 
+                                                    class="svg-inline--fa fa-caret-down fa-w-10" role="img" 
+                                                    xmlns="http://www.w3.org/2000/svg" viewBox="0 0 320 512"><path fill="currentColor"
+                                                    d="M31.3 192h257.3c17.8 0 26.7 21.5 14.1 34.1L174.1 354.8c-7.8 7.8-20.5 7.8-28.3 0L17.2 226.1C4.6 213.5 13.5 192 31.3 192z"></path></svg>
+                                                </div>
+                                            </div>
+                                            <div class="select__body" id="timeSelector">
+                                                <div class="select__item">08:00 - 10:00</div>
+                                                <div class="select__item">10:00 - 12:00</div>
+                                                <div class="select__item">12:00 - 14:00</div>
+                                                <div class="select__item">14:00 - 16:00</div>
+                                                <div class="select__item">16:00 - 18:00</div>
+                                                <div class="select__item">18:00 - 20:00</div>
+                                                <div class="select__item">20:00 - 22:00</div>
+                                                <div class="select__item">22:00 - 00:00</div>
+                                                <div class="select__item">00:00 - 02:00</div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <button class="form-booking__btn"><span>Забронировать</span></button>
+                            </form>
+                        </div>
+                        <div class="booking__column" id="shift-left" data-aos="fade-left" data-aos-duration="1200">
+                            <div class="booking__media media media_right">
+                                <div class="booking__img">
+                                    <img src="./img/booking/3.jpg" alt="">
+                                </div>
+                                <div class="booking__rect rect rect_right">
+                                    <img src="./img/global/rect.png" alt="">
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="booking__footer">
+                         Пн - Пт: <span>8:00 - 22:00</span>, Сб - Вс: <span>8:00 - 02:00</span>,
+                         Телефон: <a class="booking__footer-phone" href="tel:+40 729 131 637">+380670000000</a>
+                    </div>
+                </div>
+            </section>
+            <section class="specialties" id="specialties">
+                <div class="container">
+                    <div class="specialties__header-block header-block_small">
+                        Популярные блюда
+                    </div>
+                    <div class="specialties__slider" id="slider">
+                        <div class="specialties__slide">
+                            <div class="specialties__body">
+                                <div class="specialties__column" data-aos="fade-right" data-aos-duration="1200">
+                                    <div class="specialties__media media media_left">
+                                        <div class="specialties__img">
+                                            <img src="./img/specialties/Tanduri.jpg" alt="">
+                                        </div>
+                                        <div class="specialties__rect rect rect_left">
+                                            <img src="./img/global/rect.png" alt="">
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="specialties__column" data-aos="fade-left" data-aos-duration="1200">
+                                    <div class="specialties__header-block header-block">
+                                        <div class="header-block__title header-block__title_white">
+                                            Курица тандури
+                                        </div>
+                                    </div>
+                                    <div class="specialties__description">
+                                        Классическое индийское блюдо — курица тандури.
+                                        Кусочки курятины, замаринованые в йогурте с добавлением специй,
+                                        а затем запеченные на большом огне в глиняной печи. 
+                                        Подается блюдо с овощами и рисом. 
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="specialties__slide">
+                            <div class="specialties__body">
+                                <div class="specialties__column">
+                                    <div class="specialties__media media media_left">
+                                        <div class="specialties__img">
+                                            <img src="./img/specialties/Lemak.jpg" alt="">
+                                        </div>
+                                        <div class="specialties__rect rect rect_left">
+                                            <img src="./img/global/rect.png" alt="">
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="specialties__column">
+                                    <div class="specialties__header-block header-block">
+                                        <div class="header-block__title header-block__title_white">
+                                            Наси лемак
+                                        </div>
+                                    </div>
+                                    <div class="specialties__description">
+                                        Наси лемак переводится как "рис со сливками". Рис готовят в кокосовом молоке с кусочками листьев пандануса.
+                                        Блюдо подают завернутым в листья банана с соусом самбал, анчоусами, арахисом и вареным яйцом. 
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="specialties__slide">
+                            <div class="specialties__body">
+                                <div class="specialties__column">
+                                    <div class="specialties__media media media_left">
+                                        <div class="specialties__img">
+                                            <img src="./img/specialties/Feijoada.jpg" alt="">
+                                        </div>
+                                        <div class="specialties__rect rect rect_left">
+                                            <img src="./img/global/rect.png" alt="">
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="specialties__column">
+                                    <div class="specialties__header-block header-block">
+                                        <div class="header-block__title header-block__title_white">
+                                            Фейжоада
+                                        </div>
+                                    </div>
+                                    <div class="specialties__description">
+                                        Фейжоада — это блюдо из черной фасоли, запеченной свинины, говядины,
+                                        специй и муки маниоки. Обычно его подают с рисом, капустой, ломтиками
+                                        апельсина и острым соусом, чтобы ускорить процесс пищеварения. 
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="specialties__slide">
+                            <div class="specialties__body">
+                                <div class="specialties__column">
+                                    <div class="specialties__media media media_left">
+                                        <div class="specialties__img">
+                                            <img src="./img/specialties/Sarmale.jpg" alt="">
+                                        </div>
+                                        <div class="specialties__rect rect rect_left">
+                                            <img src="./img/global/rect.png" alt="">
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="specialties__column">
+                                    <div class="specialties__header-block header-block">
+                                        <div class="header-block__title header-block__title_white">
+                                            Сармале
+                                        </div>
+                                    </div>
+                                    <div class="specialties__description">
+                                        Сармале — это румынский вариант голубцов или долмы.
+                                        Он представляет собой фарш из риса и мяса, запеченный
+                                        в мелких соленых капустных или виноградных листьях. 
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="specialties__slide">
+                            <div class="specialties__body">
+                                <div class="specialties__column">
+                                    <div class="specialties__media media media_left">
+                                        <div class="specialties__img">
+                                            <img src="./img/specialties/Kasba.jpg" alt="">
+                                        </div>
+                                        <div class="specialties__rect rect rect_left">
+                                            <img src="./img/global/rect.png" alt="">
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="specialties__column">
+                                    <div class="specialties__header-block header-block">
+                                        <div class="header-block__title header-block__title_white">
+                                            Касба
+                                        </div>
+                                    </div>
+                                    <div class="specialties__description">
+                                        Это блюдо из риса с добавлением большого количества разных специй — гвоздики,
+                                        кардамона, шафрана, корицы, перца, мускатного ореха и лаврового листа.
+                                        Касба обычно подается с мясом и овощами.  
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+            <section class="menu" id="menu">
+                <div class="container">
+                    <div class="menu__header-block header-block">
+                        <div class="header-block__title">
+                            Меню ресторана
+                        </div>
+                        <div class="header-block__subtitle">
+                            Используйте вкладки для навигации по меню
+                        </div>
+                    </div>
+                    <div class="menu__tabs tabs">
+                        <div class="tabs__header">
+                            <button class="tabs__btn is-active">Супы</button>
+                            <button class="tabs__btn">Пицца</button>
+                            <button class="tabs__btn">Паста</button>
+                            <button class="tabs__btn">Десерты</button>
+                            <button class="tabs__btn">Вина</button>
+                            <button class="tabs__btn">Пиво</button>
+                            <button class="tabs__btn">Напитки</button>
+                        </div>
+                        <div class="tabs__swipe">
+                            <svg height="50px" viewBox="-16 0 466 466.238" width="50px" xmlns="http://www.w3.org/2000/svg"><path d="m393.851562 161.238281h-.710937c-9.851563.035157-19.320313 3.824219-26.476563 10.589844-5.585937-16.320313-20.402343-28.011719-37.808593-28.011719-10.78125.140625-21.027344 4.714844-28.320313 12.652344-6.589844-13.90625-20.199218-23.230469-35.886718-23.230469h-.757813c-9.027344 0-17.816406 2.6875-23.816406 8.03125v-98.878906c0-23.375-18.125-42.390625-40.246094-42.390625-22.097656 0-40.152344 19-40.167969 42.359375l-.171875 195.554687-11.863281-14.421874c-9.546875-11.886719-23.605469-19.269532-38.808594-20.386719-14.898437-1.019531-29.554687 4.167969-40.496094 14.332031l-9.558593 7.929688c-2.902344 2.40625-3.730469 6.511718-1.992188 9.851562l92.957031 178.46875c16.910157 32.488281 49.078126 52.550781 83.949219 52.550781h104.261719c52.871094 0 95.929688-45.699219 95.984375-102.023437.023437-25.164063.050781-43.882813.066406-59.128906.054688-41.050782.074219-56.398438-.03125-101.585938-.054687-23.3125-18.042969-42.261719-40.105469-42.261719zm24.136719 143.886719c-.015625 15.246094-.042969 33.910156-.066406 59.074219-.046875 47.507812-35.925781 86.039062-79.984375 86.039062h-104.261719c-28.886719 0-55.617187-16.761719-69.761719-43.933593l-89.976562-172.800782 4.742188-3.898437c.101562-.085938.207031-.160157.304687-.253907 7.722656-7.265624 18.121094-10.996093 28.703125-10.289062 10.808594.828125 20.792969 6.113281 27.554688 14.589844l26.011718 31.667968c2.144532 2.609376 5.695313 3.589844 8.875 2.453126 3.179688-1.136719 5.304688-4.148438 5.308594-7.527344l.152344-217.871094c.007812-14.539062 10.957031-26.371094 24.246094-26.371094 13.285156 0 24.238281 11.835938 24.238281 26.386719v131.382813c0 .453124-.019531.90625-.019531 1.363281 0 .199219.019531.386719.019531.578125v56.183594c0 4.417968 3.582031 8 8 8s8-3.582032 8-8v-57.855469c0-14.039063 10.863281-24.804688 23.816406-24.804688h.757813c13.289062 0 24.425781 11.355469 24.425781 25.910157v51.390624c0 4.417969 3.582031 8 8 8s8-3.582031 8-8v-40.324218c0-14.550782 10.671875-26.390625 24.039062-26.390625 13.292969 0 23.960938 11.839843 23.960938 26.390625v38.042968c0 4.417969 3.582031 8 8 8s8-3.582031 8-8v-20.597656c0-14.554687 10.773437-26.421875 24.066406-26.421875h.710937c13.257813 0 24.074219 11.820313 24.105469 26.328125.105469 45.160156.085938 60.527344.03125 101.558594zm0 0"/>
+                                <path d="m268.074219 79.238281h103.683593l-18.589843 18.589844c-2.070313 2.011719-2.898438 4.980469-2.164063 7.769531.734375 2.792969 2.914063 4.972656 5.707032 5.707032 2.789062.730468 5.757812-.097657 7.769531-2.167969l32.128906-32.125c3.125-3.125 3.125-8.191407 0-11.3125l-32.128906-32.125c-3.128907-3.09375-8.167969-3.078125-11.277344.03125-3.113281 3.113281-3.128906 8.152343-.035156 11.28125l18.351562 18.351562h-103.445312c-4.417969 0-8 3.582031-8 8s3.582031 8 8 8zm0 0"/><path d="m27.3125 79.238281h102.761719c4.417969 0 8-3.582031 8-8s-3.582031-8-8-8h-102.523438l18.351563-18.351562c3.09375-3.128907 3.078125-8.167969-.035156-11.28125-3.109376-3.109375-8.148438-3.125-11.277344-.03125l-32.128906 32.125c-3.121094 3.125-3.121094 8.191406 0 11.3125l32.128906 32.125c2.015625 2.042969 4.972656 2.847656 7.746094 2.109375 2.773437-.734375 4.9375-2.902344 5.675781-5.675782.738281-2.773437-.066407-5.726562-2.109375-7.746093zm0 0"/>
+                            </svg>
+                        </div>
+                        <div class="tabs__body">
+                            <div class="tabs__content is-active">
+                                <div class="tabs__row">
+                                    <div class="tabs__column" data-aos="fade-up" data-aos-duration="1000">
+                                        <div class="tabs__dish dish">
+                                            <div class="dish__name">
+                                                Паста э Фаджоли - <span class="dish__price">80 грн</span><br>
+                                                <span class="dish__description">
+                                                    Куриный бульон, макаронные изделия и овощи
+                                                </span>
+                                            </div>
+                                        </div>
+                                        <div class="tabs__dish dish">
+                                            <div class="dish__name">
+                                                Буйабес - <span class="dish__price">90 грн</span><br>
+                                                <span class="dish__description">
+                                                    Рыбный суп
+                                                </span>
+                                            </div>
+                                        </div>
+                                        <div class="tabs__dish dish">
+                                            <div class="dish__name">
+                                                Позоле - <span class="dish__price">110 грн</span><br>
+                                                <span class="dish__description">
+                                                    Свинина или курятина в бульоне, мамалыга, лук, чеснок, сушёные чили и кинза
+                                                </span>
+                                            </div>
+                                        </div>
+                                        <div class="tabs__dish dish">
+                                            <div class="dish__name">
+                                                Гаспачо - <span class="dish__price">80 грн</span><br>
+                                                <span class="dish__description">
+                                                    Холодный суп из помидоров и овощей
+                                                </span>
+                                            </div>
+                                        </div>
+                                        <div class="tabs__dish dish">
+                                            <div class="dish__name">
+                                                Каллен скинк - <span class="dish__price">130 грн</span><br>
+                                                <span class="dish__description">
+                                                    Копчёная пикша, картофель, лук и сливки
+                                                </span>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="tabs__column" data-aos="fade-up" data-aos-delay="400" data-aos-duration="1000">
+                                        <div class="tabs__dish dish">
+                                            <div class="dish__name">
+                                                Суп Би-Хун - <span class="dish__price">110 грн</span><br>
+                                                <span class="dish__description">
+                                                    Суп из морепродуктов
+                                                </span>
+                                            </div>
+                                        </div>
+                                        <div class="tabs__dish dish">
+                                            <div class="dish__name">
+                                                Фанеска - <span class="dish__price">140 грн</span><br>
+                                                <span class="dish__description">
+                                                    Суп из трески
+                                                </span>
+                                            </div>
+                                        </div>
+                                        <div class="tabs__dish dish">
+                                            <div class="dish__name">
+                                                Крабовый суп - <span class="dish__price">150 грн</span><br>
+                                                <span class="dish__description">
+                                                    Мясо краба и жирные сливки
+                                                </span>
+                                            </div>
+                                        </div>
+                                        <div class="tabs__dish dish">
+                                            <div class="dish__name">
+                                                Консоме - <span class="dish__price">100 грн</span><br>
+                                                <span class="dish__description">
+                                                    Крепкий, сильно уваренный осветлённый мясной бульон
+                                                </span>
+                                            </div>
+                                        </div>
+                                        <div class="tabs__dish dish">
+                                            <div class="dish__name">
+                                                Чоппино - <span class="dish__price">120 грн</span><br>
+                                                <span class="dish__description">
+                                                    Тушённое рыбное ассорти с томатами и моллюсками
+                                                </span>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="tabs__column" data-aos="fade-up" data-aos-delay="800" data-aos-duration="1000">
+                                        <div class="tabs__dish dish">
+                                            <div class="dish__name">
+                                                Чупе - <span class="dish__price">90 грн</span><br>
+                                                <span class="dish__description">
+                                                    Густой молочный суп с морепродуктами
+                                                </span>
+                                            </div>
+                                        </div>
+                                        <div class="tabs__dish dish">
+                                            <div class="dish__name">
+                                                Касуэла - <span class="dish__price">120 грн</span><br>
+                                                <span class="dish__description">
+                                                    Прозрачный бульон, рис, картофель, кабачки или тыква, кукуруза, курица или говядина
+                                                </span>
+                                            </div>
+                                        </div>
+                                        <div class="tabs__dish dish">
+                                            <div class="dish__name">
+                                                Лити - <span class="dish__price">100 грн</span><br>
+                                                <span class="dish__description">
+                                                    Баранина с горохом и и курдюком
+                                                </span>
+                                            </div>
+                                        </div>
+                                        <div class="tabs__dish dish">
+                                            <div class="dish__name">
+                                                Калду верде - <span class="dish__price">140 грн</span><br>
+                                                <span class="dish__description">
+                                                    Картофель, тонко нарезанная кале и ломтики чоризо
+                                                </span>
+                                            </div>
+                                        </div>
+                                        <div class="tabs__dish dish">
+                                            <div class="dish__name">
+                                                Авголемоно - <span class="dish__price">80 грн</span><br>
+                                                <span class="dish__description">
+                                                    Куриный бульон, рис, ризони и лимон, сгущённые осторожно введёнными яйцами
+                                                </span>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="tabs__content">
+                                <div class="tabs__row">
+                                    <div class="tabs__column">
+                                        <div class="tabs__dish dish">
+                                            <div class="dish__name">
+                                                «Сицилийская» - <span class="dish__price">200 грн</span><br>
+                                                <span class="dish__description">
+                                                    Анчоусы, итальянский сыр пекорино и томаты
+                                                </span>
+                                            </div>
+                                        </div>
+                                        <div class="tabs__dish dish">
+                                            <div class="dish__name">
+                                                Пицца «Дьябло» - <span class="dish__price">220 грн</span><br>
+                                                <span class="dish__description">
+                                                    Колбаски, сыр Моцарелла и Пармезан, шампиньоны и перец чили
+                                                </span>
+                                            </div>
+                                        </div>
+                                        <div class="tabs__dish dish">
+                                            <div class="dish__name">
+                                                Гавайская пицца - <span class="dish__price">210 грн</span><br>
+                                                <span class="dish__description">
+                                                    Курица, ананасы, лук, зеленый перец, сыр и томатный соус
+                                                </span>
+                                            </div>
+                                        </div>
+                                        <div class="tabs__dish dish">
+                                            <div class="dish__name">
+                                                «Кальцоне» - <span class="dish__price">220 грн</span><br>
+                                                <span class="dish__description">
+                                                    Орегано, грибы, рикотта, ветчина, моцарелла, пармезан
+                                                </span>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="tabs__column">
+                                        <div class="tabs__dish dish">
+                                            <div class="dish__name">
+                                                Пицца по-неаполитански - <span class="dish__price">210 грн</span><br>
+                                                <span class="dish__description">
+                                                    Сыр, маслины, колбаса, свежие помидоры, оливковое масло
+                                                </span>
+                                            </div>
+                                        </div>
+                                        <div class="tabs__dish dish">
+                                            <div class="dish__name">
+                                                Пицца «Четыре сыра» - <span class="dish__price">200 грн</span><br>
+                                                <span class="dish__description">
+                                                    сыр Пармезан, Моцарелла, Дорблю, Бри
+                                                </span>
+                                            </div>
+                                        </div>
+                                        <div class="tabs__dish dish">
+                                            <div class="dish__name">
+                                                Пицца «Четыре мяса» - <span class="dish__price">250 грн</span><br>
+                                                <span class="dish__description">
+                                                    Куриное филе, бекон, салями, ветчина, вкус которых удачно дополняет Моцарелла
+                                                </span>
+                                            </div>
+                                        </div>
+                                        <div class="tabs__dish dish">
+                                            <div class="dish__name">
+                                                Овощная пицца - <span class="dish__price">200 грн</span><br>
+                                                <span class="dish__description">
+                                                    Грибы, сладкий перец, крымский лук, маслины, томаты, томатный соус
+                                                </span>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="tabs__column">
+                                        <div class="tabs__dish dish">
+                                            <div class="dish__name">
+                                                «Охотничья» пицца - <span class="dish__price">230 грн</span><br>
+                                                <span class="dish__description">
+                                                    Помидоры, моцарелла, соус, корнишоны, охотничьи колбаски, лук
+                                                </span>
+                                            </div>
+                                        </div>
+                                        <div class="tabs__dish dish">
+                                            <div class="dish__name">
+                                                Цыпленок BBQ - <span class="dish__price">220 грн</span><br>
+                                                <span class="dish__description">
+                                                    Маринованный лук, бекон, специальный BBQ соус, моцарелла и филе цыпленка.
+                                                </span>
+                                            </div>
+                                        </div>
+                                        <div class="tabs__dish dish">
+                                            <div class="dish__name">
+                                                Пицца с тунцом - <span class="dish__price">240 грн</span><br>
+                                                <span class="dish__description">
+                                                    Томатный соус, маслины, моцареллу и тунец
+                                                </span>
+                                            </div>
+                                        </div>
+                                        <div class="tabs__dish dish">
+                                            <div class="dish__name">
+                                                «Капричоза» - <span class="dish__price">230 грн</span><br>
+                                                <span class="dish__description">
+                                                    Маринованные помидоры и оливки, сыра Рикотта и Пармезан, ветчина
+                                                </span>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="tabs__content">
+                                <div class="tabs__row">
+                                    <div class="tabs__column">
+                                        <div class="tabs__dish dish">
+                                            <div class="dish__name">
+                                                Паста c морепродуктами - <span class="dish__price">100 грн</span><br>
+                                                <span class="dish__description">
+                                                    Лапша, чеснок, помидор, мидии, креветка тигровая, соус Пилате, базилик, сыр пармезан
+                                                </span>
+                                            </div>
+                                        </div>
+                                        <div class="tabs__dish dish">
+                                            <div class="dish__name">
+                                                Паста Больньезе - <span class="dish__price">220 грн</span><br>
+                                                <span class="dish__description">
+                                                    Лапша, соус больньезе, лук, фарш говяжий фарш свиной, сыр пармезан базилик
+                                                </span>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="tabs__column">
+                                        <div class="tabs__dish dish">
+                                            <div class="dish__name">
+                                                Паста Карбонара - <span class="dish__price">90 грн</span><br>
+                                                <span class="dish__description">
+                                                    Лапша, бекон, сливки, сыр пармезан
+                                                </span>
+                                            </div>
+                                        </div>
+                                        <div class="tabs__dish dish">
+                                            <div class="dish__name">
+                                                Равиоли с кроликом - <span class="dish__price">200 грн</span>br>
+                                                <span class="dish__description">
+                                                    Равиоли с кроликом подаются с томатно-грибным соусом.
+                                                </span>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="tabs__column">
+                                        <div class="tabs__dish dish">
+                                            <div class="dish__name">
+                                                Паста с грибами - <span class="dish__price">110 грн</span><br>
+                                                <span class="dish__description">
+                                                    Лапша, шампиньоны, сыр пармезан, соус грибной, лук зеленый
+                                                </span>
+                                            </div>
+                                        </div>
+                                        <div class="tabs__dish dish">
+                                            <div class="dish__name">
+                                                Паста с мидиями - <span class="dish__price">120 грн</span><br>
+                                                <span class="dish__description">
+                                                    Лапша, чеснок, лук, помидор, мидии, белое вино, перец чили, базилик
+                                                </span>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="tabs__content">
+                                <div class="tabs__row">
+                                    <div class="tabs__column">
+                                        <div class="tabs__dish dish">
+                                            <div class="dish__name">
+                                                Торт вафельный - <span class="dish__price">60 грн</span><br>
+                                                <span class="dish__description">
+                                                    Вафли, сгущенное молоко, масло сливочное
+                                                </span>
+                                            </div>
+                                        </div>
+                                        <div class="tabs__dish dish">
+                                            <div class="dish__name">
+                                                Американський мак - <span class="dish__price">80 грн</span><br>
+                                                <span class="dish__description">
+                                                    Мак, молоко, черный шоколад, масло сливочное, арахис, яйцо
+                                                </span>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="tabs__column">
+                                        <div class="tabs__dish dish">
+                                            <div class="dish__name">
+                                                Чизкейк клубника - <span class="dish__price">70 грн</span><br>
+                                                <span class="dish__description">
+                                                    Гляссаж, основа для чизкейка, крем, конфи клубничный
+                                                </span>
+                                            </div>
+                                        </div>
+                                        <div class="tabs__dish dish">
+                                            <div class="dish__name">
+                                                Тирамису - <span class="dish__price">70 грн</span><br>
+                                                <span class="dish__description">
+                                                    Бисквит, сыр маскарпоне, сливки, шоколад, эспрессо, вино масала
+                                                </span>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="tabs__column">
+                                        <div class="tabs__dish dish">
+                                            <div class="dish__name">
+                                                Наполеон - <span class="dish__price">80 грн</span><br>
+                                                <span class="dish__description">
+                                                    Молоко, сливки, яйцо куриное, пиво, крахмал, мука
+                                                </span>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="tabs__content">
+                                <div class="tabs__row">
+                                    <div class="tabs__column">
+                                        <div class="tabs__dish dish">
+                                            <div class="dish__name">
+                                                Вино Blanc, Baron d'Arignac, Франция - <span class="dish__price">250 грн</span><br>
+                                                <span class="dish__description">
+                                                    Вино Blanc, Baron d'Arignac, Франция, белое сухое
+                                                </span>
+                                            </div>
+                                        </div>
+                                        <div class="tabs__dish dish">
+                                            <div class="dish__name">
+                                                Игристое вино Lambrusco dell 'Emilia Bianco Dry, Италия - <span class="dish__price">270 грн</span><br>
+                                                <span class="dish__description">
+                                                    Игристое вино Lambrusco dell Emilia, Италия, белое сухое
+                                                </span>
+                                            </div>
+                                        </div>
+                                        <div class="tabs__dish dish">
+                                            <div class="dish__name">
+                                                Игристое вино Lambrusco dell Emilia Bianco Chiarly, Италия - <span class="dish__price">280 грн</span><br>
+                                                <span class="dish__description">
+                                                    Игристое вино Lambrusco dell Emilia, Италия, белое сладкое
+                                                </span>
+                                            </div>
+                                        </div>
+                                        <div class="tabs__dish dish">
+                                            <div class="dish__name">
+                                                Игристое вино Lambrusco dell Emilia Rosato, Chiarly, Италия - <span class="dish__price">320 грн</span><br>
+                                                <span class="dish__description">
+                                                    Игристое итальянское вино Lambrusco dell Emilia Rosato, Chiarly, розовое сладкое
+                                                </span>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="tabs__column">
+                                        <div class="tabs__dish dish">
+                                            <div class="dish__name">
+                                                Вино Blanc, Baron d'Arignac, Франция - <span class="dish__price">255 грн</span><br>
+                                                <span class="dish__description">
+                                                    Вино Blanc, Baron d'Arignac, Франция, белое сухое
+                                                </span>
+                                            </div>
+                                        </div>
+                                        <div class="tabs__dish dish">
+                                            <div class="dish__name">
+                                                Игристое вино Lambrusco dell 'Emilia Bianco Dry, Италия - <span class="dish__price">270 грн</span><br>
+                                                <span class="dish__description">
+                                                    Игристое вино Lambrusco dell Emilia, Италия, белое сухое
+                                                </span>
+                                            </div>
+                                        </div>
+                                        <div class="tabs__dish dish">
+                                            <div class="dish__name">
+                                                Игристое вино Lambrusco dell Emilia Bianco Chiarly, Италия - <span class="dish__price">280 грн</span><br>
+                                                <span class="dish__description">
+                                                    Игристое вино Lambrusco dell Emilia, Италия, белое сладкое
+                                                </span>
+                                            </div>
+                                        </div>
+                                        <div class="tabs__dish dish">
+                                            <div class="dish__name">
+                                                Игристое вино Lambrusco dell Emilia Rosato, Chiarly, Италия - <span class="dish__price">320 грн</span><br>
+                                                <span class="dish__description">
+                                                    Игристое итальянское вино Lambrusco dell Emilia Rosato, Chiarly, розовое сладкое
+                                                </span>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="tabs__column">
+                                        <div class="tabs__dish dish">
+                                            <div class="dish__name">
+                                                Вино Blanc, Baron d'Arignac, Франция - <span class="dish__price">255 грн</span><br>
+                                                <span class="dish__description">
+                                                    Вино Blanc, Baron d'Arignac, Франция, белое сухое
+                                                </span>
+                                            </div>
+                                        </div>
+                                        <div class="tabs__dish dish">
+                                            <div class="dish__name">
+                                                Игристое вино Lambrusco dell 'Emilia Bianco Dry, Италия - <span class="dish__price">270 грн</span><br>
+                                                <span class="dish__description">
+                                                    Игристое вино Lambrusco dell Emilia, Италия, белое сухое
+                                                </span>
+                                            </div>
+                                        </div>
+                                        <div class="tabs__dish dish">
+                                            <div class="dish__name">
+                                                Игристое вино Lambrusco dell Emilia Bianco Chiarly, Италия - <span class="dish__price">280 грн</span><br>
+                                                <span class="dish__description">
+                                                    Игристое вино Lambrusco dell Emilia, Италия, белое сладкое
+                                                </span>
+                                            </div>
+                                        </div>
+                                        <div class="tabs__dish dish">
+                                            <div class="dish__name">
+                                                Игристое вино Lambrusco dell Emilia Rosato, Chiarly, Италия - <span class="dish__price">320 грн</span><br>
+                                                <span class="dish__description">
+                                                    Игристое итальянское вино Lambrusco dell Emilia Rosato, Chiarly, розовое сладкое
+                                                </span>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="tabs__content">
+                                <div class="tabs__row">
+                                    <div class="tabs__column">
+                                        <div class="tabs__dish dish">
+                                            <div class="dish__name">
+                                                Пиво Budweiser - <span class="dish__price">60 грн</span><br>
+                                                <span class="dish__description">
+                                                    Budweiser
+                                                </span>
+                                            </div>
+                                        </div>
+                                        <div class="tabs__dish dish">
+                                            <div class="dish__name">
+                                                Пиво Budweiser n/a - <span class="dish__price">70 грн</span><br>
+                                                <span class="dish__description">
+                                                    Budweiser
+                                                </span>
+                                            </div>
+                                        </div>
+                                        <div class="tabs__dish dish">
+                                            <div class="dish__name">
+                                                Пиво Grimbergen Blanche - <span class="dish__price">80 грн</span><br>
+                                                <span class="dish__description">
+                                                    Blanche
+                                                </span>
+                                            </div>
+                                        </div>
+                                        <div class="tabs__dish dish">
+                                            <div class="dish__name">
+                                                Пиво Corona - <span class="dish__price">90 грн</span><br>
+                                                <span class="dish__description">
+                                                    Corona
+                                                </span>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="tabs__column">
+                                        <div class="tabs__dish dish">
+                                            <div class="dish__name">
+                                                Пиво Leffe - <span class="dish__price">85 грн</span><br>
+                                                <span class="dish__description">
+                                                    Leffe
+                                                </span>
+                                            </div>
+                                        </div>
+                                        <div class="tabs__dish dish">
+                                            <div class="dish__name">
+                                                Пиво Hoegaarden - <span class="dish__price">70 грн</span><br>
+                                                <span class="dish__description">
+                                                    Hoegaarden
+                                                </span>
+                                            </div>
+                                        </div>
+                                        <div class="tabs__dish dish">
+                                            <div class="dish__name">
+                                                Пиво Stella Artois светлое - <span class="dish__price">60 грн</span><br>
+                                                <span class="dish__description">
+                                                    Stella Artois
+                                                </span>
+                                            </div>
+                                        </div>
+                                        <div class="tabs__dish dish">
+                                            <div class="dish__name">
+                                                Пиво Stella Artois n/a - <span class="dish__price">60 грн</span><br>
+                                                <span class="dish__description">
+                                                    Stella Artois
+                                                </span>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="tabs__column">
+                                        <div class="tabs__dish dish">
+                                            <div class="dish__name">
+                                                Пиво Carlsberg - <span class="dish__price">55 грн</span><br>
+                                                <span class="dish__description">
+                                                    Carlsberg
+                                                </span>
+                                            </div>
+                                        </div>
+                                        <div class="tabs__dish dish">
+                                            <div class="dish__name">
+                                                Gиво Warsteiner - <span class="dish__price">90 грн</span><br>
+                                                <span class="dish__description">
+                                                    Warsteiner
+                                                </span>
+                                            </div>
+                                        </div>
+                                        <div class="tabs__dish dish">
+                                            <div class="dish__name">
+                                                Пиво Old Prague - <span class="dish__price">70 грн</span><br>
+                                                <span class="dish__description">
+                                                    Old Prague
+                                                </span>
+                                            </div>
+                                        </div>
+                                        <div class="tabs__dish dish">
+                                            <div class="dish__name">
+                                                Пиво Bavaria - <span class="dish__price">70 грн</span><br>
+                                                <span class="dish__description">
+                                                    Bavaria
+                                                </span>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="tabs__content">
+                                <div class="tabs__row">
+                                    <div class="tabs__column">
+                                        <div class="tabs__dish dish">
+                                            <div class="dish__name">
+                                                Джин "Gordon’s" - <span class="dish__price">500 грн</span><br>
+                                                <span class="dish__description">
+                                                    Gordon’s 1л
+                                                </span>
+                                            </div>
+                                        </div>
+                                        <div class="tabs__dish dish">
+                                            <div class="dish__name">
+                                                Виски Bells Original - <span class="dish__price">550 грн</span><br>
+                                                <span class="dish__description">
+                                                    Bells Original 1л
+                                                </span>
+                                            </div>
+                                        </div>
+                                        <div class="tabs__dish dish">
+                                            <div class="dish__name">
+                                                Ром "Captain Morgan Original Spiced Gold" - <span class="dish__price">480 грн</span><br>
+                                                <span class="dish__description">
+                                                    Captain Morgan 1л
+                                                </span>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="tabs__column">
+                                        <div class="tabs__dish dish">
+                                            <div class="dish__name">
+                                                Сок Грейпфрутовый - <span class="dish__price">50 грн</span><br>
+                                                <span class="dish__description">
+                                                    Sandora 1л
+                                                </span>
+                                            </div>
+                                        </div>
+                                        <div class="tabs__dish dish">
+                                            <div class="dish__name">
+                                                Сок Апельсиновый - <span class="dish__price">50 грн</span><br>
+                                                <span class="dish__description">
+                                                    Sandora 1л
+                                                </span>
+                                            </div>
+                                        </div>
+                                        <div class="tabs__dish dish">
+                                            <div class="dish__name">
+                                                Сок Томатный - <span class="dish__price">50 грн</span><br>
+                                                <span class="dish__description">
+                                                    Sandora 1л
+                                                </span>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="tabs__column">
+                                        <div class="tabs__dish dish">
+                                            <div class="dish__name">
+                                                Виски Bushmills - <span class="dish__price">455 грн</span><br>
+                                                <span class="dish__description">
+                                                    Bushmills 1л
+                                                </span>
+                                            </div>
+                                        </div>
+                                        <div class="tabs__dish dish">
+                                            <div class="dish__name">
+                                                Ликер Baileys The Original - <span class="dish__price">570 грн</span><br>
+                                                <span class="dish__description">
+                                                    Baileys The Original 0.7л
+                                                </span>
+                                            </div>
+                                        </div>
+                                        <div class="tabs__dish dish">
+                                            <div class="dish__name">
+                                                Коньяк Sarajishvili 5* - <span class="dish__price">370 грн</span><br>
+                                                <span class="dish__description">
+                                                    BSarajishvili 0.5л
+                                                </span>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>   
+                    </div>
+                </div>
+            </section>
+            <section class="events" id="events">
+                <div class="container">
+                    <div class="events__header-block header-block_small">
+                        Наши мероприятия
+                    </div>
+                    <div class="events__body">
+                        <div class="events__column events-padding-left" data-aos="fade-right" data-aos-duration="1200">
+                            <div class="events__media media media_left media_bar-right">
+                                <div class="events__img">
+                                    <img src="./img/events/4.jpg" alt="">
+                                </div>
+                                <div class="events__elements">
+                                    <div class="events__rect rect rect_left">
+                                        <img src="./img/global/rect.png" alt="">
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="events__column events-padding-right" data-aos="fade-left" data-aos-duration="1200">
+                            <div class="events__media media media_right media_bar-left">
+                                <div class="events__img">
+                                    <img src="./img/events/5.jpg" alt="">
+                                </div>
+                                <div class="events__elements">
+                                    <div class="events__rect rect rect_right">
+                                        <img src="./img/global/rect.png" alt="">
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="events__footer">
+                        Для организации звоните: 
+                        <a href="tel:+40 729 131 637"><span>+380670000000</span></a><span>
+                        или используйте форму обратной связи
+                   </div>
+                </div>
+            </section>
+            <section class="gallery" id="gallery">
+                <a class="gallery__link" data-fancybox="gallery" href="./img/gallery/01.jpg">
+                    <img src="./img/gallery/01.jpg" alt="">
+                </a>
+                <a class="gallery__link" data-fancybox="gallery" href="./img/gallery/02.jpg">
+                    <img src="./img/gallery/02.jpg" alt="">
+                </a>
+                <a class="gallery__link" data-fancybox="gallery" href="./img/gallery/03.jpg">
+                    <img src="./img/gallery/03.jpg" alt="">
+                </a>
+                <a class="gallery__link" data-fancybox="gallery" href="./img/gallery/04.jpg">
+                    <img src="./img/gallery/04.jpg" alt="">
+                </a>
+            </section>
+            <section class="contact" id="contact">
+                <div class="container">
+                    <div class="contact__header-block header-block">
+                        <div class="header-block__title">
+                            Контакты
+                        </div>
+                        <div class="header-block__subtitle">
+                            Для связи с нами используйте эту контактную форму
+                        </div>
+                    </div>
+                    <form action="#" method="POST" class="contact__form form-contact" name="contactFrom" data-aos="flip-up" data-aos-duration="800">
+                        <div class="form-contact__inputs">
+                            <div class="form-contact__input">
+                                <input type="text" placeholder="Имя" name="name">
+                            </div>
+                            <div class="form-contact__input">
+                                <input type="text" placeholder="Email" name="email">
+                            </div>
+                            <div class="form-contact__input">
+                                <input type="text" id="phone-contact" placeholder="Телефон" name="phone" required>
+                            </div>
+                        </div>
+                        <div class="form-contact__message">
+                            <textarea name="order" placeholder="Сообщение"></textarea>
+                        </div>
+                        <div class="form-contact__bottom">
+                            <div class="form-contact__column">
+                                <a class="form-contact__addr-lnk" href="https://goo.gl/maps/pd2vs7cSM2hi21ch6" target="_blank">Киев, улиця Крещатик, 14</a>
+                                <a class="form-contact__phn-lnk" href="tel:+40 729 131 637"><span>+380670000000</span></a>
+                                <a class="form-contact__mail-lnk" href="mailto:goodfood.com">goodfood.mail.com</a>
+                            </div>
+                            <div class="form-contact__column">
+                                <button class="form-contact__btn"><span>отправить</span></button>
+                            </div>
+                        </div>
+                    </form>
+                </div>
+            </section>
+            <section class="map">
+                <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d24178.5772558555!2d30.49426118083878!3d50.432534397029926!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0x87d5fef2886448a7!2z0KDQtdGB0YLQvtGA0LDQvSDQvdCwINCa0YDQtdGJ0LDRgtC40LrQtQ!5e0!3m2!1sru!2sua!4v1609107470850!5m2!1sru!2sua" width="100%" height="600" style="border:0;" allowfullscreen="" aria-hidden="false" tabindex="0"></iframe>
+            </section>
+        </main>
+        <footer class="footer">
+            <div class="footer__text">
+                © Киев, 2020
+            </div>
+        </footer>
+        <div class="modal">
+            <div class="modal__content">
+                <div class="booking__header-block header-block">
+                    <div class="header-block__title">
+                        Забронировать стол
+                    </div>
+                </div>
+                <span class="modal__close">
+                    <svg width="22" height="22" aria-hidden="true" focusable="false" data-prefix="fas" data-icon="window-close"
+                    class="svg-inline--fa fa-window-close fa-w-16" role="img" xmlns="http://www.w3.org/2000/svg"
+                    viewBox="0 0 512 512"><path fill="currentColor"
+                    d="M464 32H48C21.5 32 0 53.5 0 80v352c0 26.5 21.5 48 48 48h416c26.5 0 48-21.5 48-48V80c0-26.5-21.5-48-48-48zm-83.6 290.5c4.8 4.8 4.8 12.6 0 17.4l-40.5 40.5c-4.8 4.8-12.6 4.8-17.4 0L256 313.3l-66.5 67.1c-4.8 4.8-12.6 4.8-17.4 0l-40.5-40.5c-4.8-4.8-4.8-12.6 0-17.4l67.1-66.5-67.1-66.5c-4.8-4.8-4.8-12.6 0-17.4l40.5-40.5c4.8-4.8 12.6-4.8 17.4 0l66.5 67.1 66.5-67.1c4.8-4.8 12.6-4.8 17.4 0l40.5 40.5c4.8 4.8 4.8 12.6 0 17.4L313.3 256l67.1 66.5z"></path>
+                    </svg>
+                </span>
+                <form action="#" method="POST" id="modal-form" class="booking__form form-booking" name="modalForm">
+                    <div class="form-booking__inputs">
+                        <div class="form-booking__input">
+                            <input type="text" placeholder="Имя" name="name">
+                        </div>
+                        <div class="form-booking__input">
+                            <input type="email" placeholder="Email" name="email">
+                        </div>
+                        <div class="form-booking__input">
+                            <input type="tel" id="phone-modal" placeholder="Телефон" name="phone" required>
+                        </div>
+                        <div class="form-booking__input">  
+                            <div class="form-booking__select select">
+                                <div class="select__header">
+                                    <div id="current-modal" class="select__current">Количество гостей</div>
+                                    <div class="select__icon">
+                                        <svg width="22" height="22" aria-hidden="true" focusable="false" data-prefix="fas" data-icon="caret-down" 
+                                        class="svg-inline--fa fa-caret-down fa-w-10" role="img" 
+                                        xmlns="http://www.w3.org/2000/svg" viewBox="0 0 320 512"><path fill="currentColor"
+                                        d="M31.3 192h257.3c17.8 0 26.7 21.5 14.1 34.1L174.1 354.8c-7.8 7.8-20.5 7.8-28.3 0L17.2 226.1C4.6 213.5 13.5 192 31.3 192z"></path></svg>
+                                    </div>
+                                </div>
+                                <div class="select__body">
+                                    <div class="select__item">1 человек</div>
+                                    <div class="select__item">2 человека</div>
+                                    <div class="select__item">3 человека</div>
+                                    <div class="select__item">4 человека</div>
+                                    <div class="select__item">5 человек</div>
+                                    <div class="select__item">6 человек</div>
+                                    <div class="select__item">7 и больше человек</div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="form-booking__input">
+                            <input type='text' class="datepicker-here" data-position="bottom left" placeholder="Дата" required readonly>
+                        </div>
+                        <div class="form-booking__input">
+                            <div class="form-booking__select select">
+                                <div class="select__header">
+                                    <div id="current-modal" class="select__current">Время</div>
+                                    <div class="select__icon">
+                                        <svg width="22" height="22" aria-hidden="true" focusable="false" data-prefix="fas" data-icon="caret-down" 
+                                        class="svg-inline--fa fa-caret-down fa-w-10" role="img" 
+                                        xmlns="http://www.w3.org/2000/svg" viewBox="0 0 320 512"><path fill="currentColor"
+                                        d="M31.3 192h257.3c17.8 0 26.7 21.5 14.1 34.1L174.1 354.8c-7.8 7.8-20.5 7.8-28.3 0L17.2 226.1C4.6 213.5 13.5 192 31.3 192z"></path></svg>
+                                    </div>
+                                </div>
+                                <div class="select__body" id="timeSelector">
+                                    <div class="select__item">08:00 - 10:00</div>
+                                    <div class="select__item">10:00 - 12:00</div>
+                                    <div class="select__item">12:00 - 14:00</div>
+                                    <div class="select__item">14:00 - 16:00</div>
+                                    <div class="select__item">16:00 - 18:00</div>
+                                    <div class="select__item">18:00 - 20:00</div>
+                                    <div class="select__item">20:00 - 22:00</div>
+                                    <div class="select__item">22:00 - 00:00</div>
+                                    <div class="select__item">00:00 - 02:00</div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <button class="form-booking__btn"><span>Забронировать</span></button>
+                </form>
+            </div>
+        </div>
+        <div class="anchor">
+            <a href="#" class="anchor__arrow">
+                <svg aria-hidden="true" focusable="false" data-prefix="fas" data-icon="arrow-circle-up" class="svg-inline--fa fa-arrow-circle-up fa-w-16" role="img" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512"><path fill="currentColor" d="M8 256C8 119 119 8 256 8s248 111 248 248-111 248-248 248S8 393 8 256zm143.6 28.9l72.4-75.5V392c0 13.3 10.7 24 24 24h16c13.3 0 24-10.7 24-24V209.4l72.4 75.5c9.3 9.7 24.8 9.9 34.3.4l10.9-11c9.4-9.4 9.4-24.6 0-33.9L273 107.7c-9.4-9.4-24.6-9.4-33.9 0L106.3 240.4c-9.4 9.4-9.4 24.6 0 33.9l10.9 11c9.6 9.5 25.1 9.3 34.4-.4z"></path>
+                </svg>
+            </a>
+        </div>
+    </div>
+    <script src="./libs/jquery/jquery-3.5.1.min.js"></script>
+    <script src="./libs/slick/slick.min.js"></script>
+    <script src="./libs/fancybox/jquery.fancybox.min.js"></script>
+    <script src="./libs/datepicker/datepicker.min.js"></script>
+    <script src="./libs/maskedInput/jquery.maskedinput.min.js"></script>
+    <script src="./libs/aos/aos.js"></script>
+    <script src="https://kit.fontawesome.com/d57d74dfef.js" crossorigin="anonymous"></script>
+    <script src="./js/main.js"></script>
+</body>
+</html>
+
+
+
+
+
